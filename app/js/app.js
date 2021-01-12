@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const mySwiper = new Swiper('.swiper-container', {
 		// Optional parameters
 		autoplay: {
-			delay: 5000,
+			delay: 15000,
 		},
 		direction: 'horizontal',
 		preloadImages: true,

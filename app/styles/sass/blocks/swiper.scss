@@ -33,6 +33,21 @@
         background-position: bottom;
     }
 
+    .slider_video {
+        position: relative;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            filter: brightness(40%);
+        }
+    }
+
     .swiper-buttons {
         margin-top: 25px;
     }

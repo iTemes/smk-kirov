@@ -15,10 +15,6 @@ h5 {
 
 .title {
     font-weight: 300;
-    
-    &__bold {
-        font-weight: 700;
-    }
 
     &--light {
         color: $white;
@@ -31,6 +27,7 @@ h5 {
     &--decorative {
         position: relative;
         padding-left: 15px;
+        font-weight: 700;
 
         &::before {
             content: "";
