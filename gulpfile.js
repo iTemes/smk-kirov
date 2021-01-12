@@ -107,7 +107,8 @@ function deploy() {
 			recursive: true,
 			archive: true,
 			silent: false,
-			compress: true
+			compress: true,
+			chmod: 'ugo=rwX',
 		}))
 }
 

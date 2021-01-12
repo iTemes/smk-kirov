@@ -3,8 +3,8 @@
 // require('~/app/libs/mmenu/js/jquery.mmenu.all.min.js') // import vendor jQuery plugin example (not module)
 
 // import Swiper JS
-import Swiper,  { Autoplay } from 'swiper';
-Swiper.use([Autoplay]);
+import Swiper,  { Autoplay, Lazy } from 'swiper';
+Swiper.use([Autoplay, Lazy]);
 
 document.addEventListener('DOMContentLoaded', () => {
 	const infoToogle = document.querySelector('.info-toogle');
@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			delay: 5000,
 		},
 		direction: 'horizontal',
+		preloadImages: true,
+		lazy: {
+			loadPrevNext: true,
+		},
 		loop: true,
-		lazy: true,
+		speed: 600,
 	})
 })
