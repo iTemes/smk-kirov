@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const headerContacts = document.querySelector('.header-contacts');
 
 	const navToogle = document.querySelector('.nav-toogle');
-	
 
 	infoToogle.addEventListener('click', handleInfoToogle);
 	navToogle.addEventListener('click', function(e) {
