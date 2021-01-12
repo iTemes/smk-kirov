@@ -1,0 +1,137 @@
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.main-nav {
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: $light-purple;
+}
+
+.logo {
+    max-height: 25px;
+}
+
+.nav-toogle {
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+
+    line-height: 50px;
+
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    position: relative;
+
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 5px;
+
+    background-color: #fff;
+    backface-visibility: hidden;
+    transition: .3s all ease;
+}
+
+.nav-toogle {
+    .toggle-icon {
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+    
+            width: 30px;
+            height: 5px;
+            background-color: #fff;
+            backface-visibility: hidden;
+        }
+    
+        &::after {
+            top: 10px;
+        }
+    
+        &::before {
+            top: -10px;
+        }
+    }
+}
+
+.info-toogle {
+    margin-left: auto;
+
+    .toggle-icon {
+        width: 6.25px;
+        height: 6.25px;
+        line-height: 6.25px;
+        border-radius: 50%;
+
+        &::after,
+        &::before {
+            width: 6.25px;
+            height: 6.25px;
+            line-height: 6.25px;
+            border-radius: 50%;
+        }
+    
+        &::after {
+            top: 10px;
+        }
+    
+        &::before {
+            top: -10px;
+        }
+    }
+}
+
+.header-contacts {
+    position: absolute;
+
+    top: 58px;
+    right: -300px;
+
+    padding: 12px 0;
+
+    background: $light-purple;
+    width: 280px;
+
+    transition: 0.3s ease;
+
+    &.open {
+        right: 0;
+        z-index: 10;
+    }
+}
+
+.header-contacts-list {
+    list-style: none;
+    padding-left: 12px;
+
+    li {
+        margin-bottom: 5px;
+        color: $white;
+    }
+
+    a {
+        padding-left: 12px;
+        padding-right: 5px;
+
+        color: inherit;
+        font-weight: 600;
+    }
+}

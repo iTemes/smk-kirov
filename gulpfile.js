@@ -100,8 +100,8 @@ function deploy() {
 	return src('dist/')
 		.pipe(rsync({
 			root: 'dist/',
-			hostname: 'username@yousite.com',
-			destination: 'yousite/public_html/',
+			hostname: 'smk-515677@ssh.smk-515677.nichost.ru',
+			destination: 'smk-kirov.ru/docs/',
 			include: [/* '*.htaccess' */], // Included files to deploy,
 			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
 			recursive: true,
