@@ -163,11 +163,67 @@
         z-index: 10;
     }
 
-    a {
-        display: block;
-        display: block;
-        padding: 13px 40px 13px 15px;
+    .main-nav__list {
+        padding: 0;
+        list-style: none;
+
+        .main-nav__link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & + .sub-nav {
+                display: none;
+            }
+
+            &.active + .sub-nav {
+                display: block;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 13px 40px 13px 15px;
+
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+
+            svg {
+                transition: 0.3s ease-in-out;
+            }
+
+            &.active,
+            &:hover {
+                color: #4555b9;
+                background: #fff;
+                text-decoration: none;
+            }
+
+            &.active {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        li {
+            margin-top: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+            a {
+                text-transform: initial;
+                font-size: 14px;
+            }
+        }
     }
+
+    
 }
 
 .header-contacts {

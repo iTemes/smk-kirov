@@ -1,0 +1,35 @@
+.services {
+    padding: 25px 0;
+    background-color: #4555b9;
+    color: #ffffff;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+       h6 {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 20px;
+
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: 700;
+            text-align: center;
+       }
+    }
+
+    &__icon {
+        color: #ffba00;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            font-size: 56px;
+            min-width: 56px;
+            height: 56px;
+            line-height: 56px;
+        }
+    }
+}

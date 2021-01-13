@@ -27,12 +27,16 @@ $tablet-width: 767px
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
 $gutter: $grid-gutter-width
+$grid-breakpoints: (xs: 0, sm: 540px, md: 720px, lg: 960px, xl: 1200px, xxl: 1600px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1200px, xxl: 1600px)
+
 
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_variables.scss' // Optional Bootstrap Grid
 @import 'node_modules/swiper/swiper.scss' // Swiper slider
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
