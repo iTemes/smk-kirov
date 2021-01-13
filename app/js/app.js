@@ -9,28 +9,27 @@ Swiper.use([Autoplay, Lazy]);
 document.addEventListener('DOMContentLoaded', () => {
 	const infoToogle = document.querySelector('.info-toogle');
 	const headerContacts = document.querySelector('.header-contacts');
-
 	const navToogle = document.querySelector('.nav-toogle');
+	const mainNav = document.querySelector('.main-nav');
 
 	infoToogle.addEventListener('click', handleInfoToogle);
-	navToogle.addEventListener('click', function(e) {
-		console.log('evt', e);
-	});
+
+	navToogle.addEventListener('click', handleNavToogle)
 
 	function handleInfoToogle() {
-		if(headerContacts.classList.contains('open')) {
-			headerContacts.classList.remove('open');
-		} else {
-			headerContacts.classList.add('open');
-			// window.addEventListener('click', () => handleWindowClick(evt));
-		}
+		headerContacts.classList.toggle('open');
+		infoToogle.classList.toggle('open');
+
+		navToogle.classList.remove('open');
+		mainNav.classList.remove('open');
 	}
 
-	function handleWindowClick(evt) {
-		if (evt.target != headerContacts) {
-			headerContacts.classList.remove('open');
-		}
-			
+	function handleNavToogle() {
+		navToogle.classList.toggle('open');
+		mainNav.classList.toggle('open');
+
+		headerContacts.classList.remove('open');
+		infoToogle.classList.remove('open');
 	}
 
 	const mySwiper = new Swiper('.swiper-container', {
