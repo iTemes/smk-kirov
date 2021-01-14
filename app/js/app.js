@@ -1,6 +1,9 @@
-// import $ from 'jquery'; window.jQuery = $; window.$ = $ // import jQuery module (npm i -D jquery)
+import $ from 'jquery'; window.jQuery = $; window.$ = $ // import jQuery module (npm i -D jquery)
 
 // require('~/app/libs/mmenu/js/jquery.mmenu.all.min.js') // import vendor jQuery plugin example (not module)
+
+// OnScreen
+import OnScreen from 'onscreen';
 
 // import Swiper JS
 import Swiper,  { Autoplay, Lazy } from 'swiper';
@@ -51,5 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 		loop: true,
 		speed: 600,
-	})
+	});
+
+	const os = new OnScreen({
+		tolerance: 50,
+		debounce: 50,
+		container: window
+	});
+
+	os.on('enter', '.about__item', (element, event) => {
+		// makes's the element's text red
+		element.classList.add('ShowIn')
+	
+	});
+	console.log('OnScreen', os)
 })

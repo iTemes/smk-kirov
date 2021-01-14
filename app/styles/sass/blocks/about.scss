@@ -4,7 +4,14 @@
 
     &__item {
         margin-bottom: 60px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: 0.45s ease-in-out;
 
+        &.ShowIn {
+            transform: translateY(0px);
+            opacity: 1;
+        }
         .title {
             display: flex;
             align-items: baseline;
