@@ -21,6 +21,11 @@
 .footer-info {
     padding-top: 40px;
     padding-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .footer-block {

@@ -41,6 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		infoToogle.classList.remove('open');
 	}
 
+	function navBarScroll() {
+		const navBarOffset = mainNav.offsetTop;
+		let windowPosScroll = window.scrollY;
+		if(window.screen.width > 960) {
+			window.addEventListener('scroll', function(evt) {
+				windowPosScroll =  window.scrollY;
+				windowPosScroll >= navBarOffset ? mainNav.classList.add('scrolled') : mainNav.classList.remove('scrolled');
+			})
+			
+		}
+	}
+	navBarScroll();
 
 	const mySwiper = new Swiper('.swiper-container', {
 		// Optional parameters
@@ -67,5 +79,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		element.classList.add('ShowIn')
 	
 	});
-	console.log('OnScreen', os)
 })
