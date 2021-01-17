@@ -203,12 +203,46 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
     background: #4555b9;
 
+    @include media-breakpoint-up(lg) {
+        position: static;
+        z-index: 10;
+        top: 135px;
+
+        width: 100%;
+
+        transform: translate(0);
+        overflow: unset;
+        background-color: transparent;
+
+        &.scrolled {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: unset;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background-color: #272c4c;
+            color: #fff;
+
+            .main-nav__logo {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0px);
+               
+            }
+        }
+    }
+
     &.open {
         transform: translateX(0px);
         z-index: 10;
     }
 
-    .main-nav__list {
+    &__list {
         padding: 0;
         list-style: none;
 
@@ -226,6 +260,10 @@
             margin-right: calc(8.333% - 30px);
             padding-left: 0;
             padding-right: 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            justify-content: flex-end;
         }
     
         .main-nav__link {
@@ -320,29 +358,14 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
-        position: static;
-        z-index: 10;
-        top: 135px;
-
-        width: 100%;
-
-        transform: translate(0);
-        overflow: unset;
-        background-color: transparent;
-
-        &.scrolled {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: unset;
-
-            background-color: #272c4c;
-            color: #fff;
-        }
+    &__logo {
+        margin-left: calc(8.333% - 30px);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.3s ease-in;
     }
-    
+
 }
 
 .header-contacts {
@@ -403,6 +426,10 @@
             &.header-contacts-list__item--product {
                 display: none;
             }
+        }
+
+        @include media-breakpoint-up(xxl) { 
+            font-size: 16px;
         }
     }
 

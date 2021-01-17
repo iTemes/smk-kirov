@@ -3,15 +3,24 @@
 		<button class="nav-toogle">
 			<span class="toggle-icon"></span>
 		</button>
-		<img class="logo" src="images/dist/logo.png" alt="Logo SMK">
+
+		<a href='<!--#echo var="logolink" -->'>
+			<img class="logo" src="images/dist/logo.png" alt="Logo SMK">
+		</a>
+	
 
 		<button class="nav-toogle info-toogle">
 			<span class="toggle-icon"></span>
 		</button>
 	</div>
 	<nav class="main-nav">
+		<div class="main-nav__logo">
+			<a href='<!--#echo var="logolink" -->'>
+				<img class="logo" src="images/dist/logo.png" alt="Logo SMK">
+			</a>
+		</div>
 		<ul class="main-nav__list">
-			<li class="main-nav__item"><a href="">О компании</a></li>
+			<li class="main-nav__item"><a href="#about">О компании</a></li>
 			<li class="main-nav__item main-nav__relative">
 				<a class="main-nav__link">
 					Услуги 
@@ -20,7 +29,7 @@
 					</svg>
 				</a>
 				<ul class="sub-nav">
-					<li class="main-nav__subitem"><a href="">Токарная обработка с ЧПУ</a></li>
+					<li class="main-nav__subitem"><a href="/chpu.html">Токарная обработка с ЧПУ</a></li>
 					<li class="main-nav__subitem"><a href="">Сверлильные работы</a></li>
 					<li class="main-nav__subitem"><a href="">Резьбонарезные работы</a></li>
 					<li class="main-nav__subitem"><a href="">Сварочные работы</a></li>
@@ -28,7 +37,7 @@
 					<li class="main-nav__subitem"><a href="">Слесарно-сборочные работы</a></li>
 				</ul>
 			</li>
-			<li class="main-nav__item"><a class="main-nav__link" href="#footer">Контакты</a></li>
+			<li class="main-nav__item"><a href="#contacts">Контакты</a></li>
 		</ul>
 	</nav>
 	<div class="header-contacts">

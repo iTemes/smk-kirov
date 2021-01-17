@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	infoToogle.addEventListener('click', handleInfoToogle);
 	navToogle.addEventListener('click', handleNavToogle);
 
+	$("a[href^='#']").on('click', function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top - 50 +"px"}, {
+			duration: 700,
+			easing: "swing",
+		});
+		return false;
+	});
+
 	relativeLinks.forEach(function(it) {
 		it.addEventListener('click', () => {
 			it.classList.toggle('active');
@@ -70,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const os = new OnScreen({
 		tolerance: 50,
-		debounce: 50,
+		debounce: 0,
 		container: window
 	});
 
