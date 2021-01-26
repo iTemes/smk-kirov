@@ -53,7 +53,8 @@
     max-height: 25px;
 
     @include media-breakpoint-up(lg) { 
-        max-height: 40px;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -203,6 +204,9 @@
         z-index: 10;
         top: 135px;
 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
 
         transform: translate(0);
@@ -222,13 +226,6 @@
 
             background-color: #272c4c;
             color: #fff;
-
-            .main-nav__logo {
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0px);
-               
-            }
         }
     }
 
@@ -277,6 +274,8 @@
                 @include media-breakpoint-up(lg) {
                     position: absolute;
                     background-color: #fff;
+                    min-width: 275px;
+                    box-shadow: 1px 1px 5px 0 rgba(0,0,0,.12);
                 }
             }
         }
@@ -328,7 +327,7 @@
 
             li {
                 @include media-breakpoint-up(lg) { 
-                    padding-left: 20px;
+                    padding-left: 10px;
                 }
              
                 &:hover {
@@ -340,13 +339,13 @@
             a {
                 text-transform: initial;
                 font-size: 14px;
-                transition: 0.3s ease-in;
-                @include media-breakpoint-up(lg) { 
+                transition:  0.2s ease-in;
+                @include  media-breakpoint-up(lg) { 
                     color: #000000;
                 }
 
                 &:hover {
-                    transform: translateX(15px);
+                    transform: translateX(5px);
                     color: #fff!important;
                 }
             }
@@ -354,13 +353,33 @@
     }
 
     &__logo {
+        display: none;
+
+        @include media-breakpoint-up(lg) { 
+            display: block;
+        }
+
         margin-left: calc(8.333% - 30px);
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: 0.3s ease-in;
+        padding-left: 10px;
+
+        .logo {
+            opacity: 1;
+            visibility: visible;
+            max-height: 40px;
+            transition: 0.2s ease;
+        }
     }
 
+}
+
+.main-nav__subitem a {
+    svg {
+        display: none;
+        transition: none;
+    }
+    &:hover svg {
+        display: inline-block;
+    }
 }
 
 .header-contacts {

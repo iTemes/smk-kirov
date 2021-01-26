@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			duration: 700,
 			easing: "swing",
 		});
+		handleNavToogle();
 		return false;
 	});
 
